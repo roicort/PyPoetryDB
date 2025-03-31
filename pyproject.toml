@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PyPoetryDB" 
+version = "0.1.0" 
+description = "Descripción breve del paquete"
+authors = [
+    { name = "Rodrigo Cortez", email = "roicort@roicort.com" }
+]
+
+dependencies = [
+    'requests',
+    'pytest'
+]
