@@ -33,3 +33,8 @@ class API:
             response = requests.get(f"{self.BASE_URL}/random/{count}/")
         handle_errors(response)
         return format_response(response)
+    
+    def custom_query(self, query):
+        response = requests.get(f"{self.BASE_URL}/{query}")
+        handle_errors(response)
+        return format_response(response)
