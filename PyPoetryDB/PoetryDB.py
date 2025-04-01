@@ -26,4 +26,10 @@ class API:
         handle_errors(response)
         return format_response(response)
     
-    
+    def get_random_poem(self, count=1, author=None):
+        if author:
+            response = requests.get(f"{self.BASE_URL}/random/{count}/{author}")
+        else:
+            response = requests.get(f"{self.BASE_URL}/random/{count}/")
+        handle_errors(response)
+        return format_response(response)
